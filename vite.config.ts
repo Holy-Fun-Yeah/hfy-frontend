@@ -11,6 +11,7 @@ export default ({ mode }) => {
 
   // Default fallback values if env variables are missing
   const PWA_NAME = env.VITE_PWA_NAME || 'My Vue App'
+  const PWA_NAME_SHORT = env.VITE_PWA_NAME_SHORT || 'AwesomeApp'
   const PWA_THEME_COLOR = env.VITE_PWA_THEME_COLOR || '#8F00FF'
   const PWA_ICON_SRC = env.VITE_PWA_ICON_SRC || 'pwa-512x512.png'
 
@@ -46,6 +47,7 @@ export default ({ mode }) => {
         includeAssets: [],
         manifest: {
           name: PWA_NAME,
+          short_name: PWA_NAME_SHORT,
           theme_color: PWA_THEME_COLOR,
           icons: [
             {
