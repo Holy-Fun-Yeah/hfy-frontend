@@ -2,7 +2,7 @@ import Unfonts from 'unplugin-fonts/vite'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
-import path from 'path'
+import tailwindcss from "@tailwindcss/vite"
 
 
 export default ({ mode }) => {
@@ -23,14 +23,21 @@ export default ({ mode }) => {
     },
     plugins: [
       vue(),
+      tailwindcss(),
       Unfonts({
         google: {
           families: [
-            { name: 'Source Sans Pro' },
-            { name: 'Playfair Display SC' },
-            { name: 'Source Code Pro' },
-            { name: 'Bungee' },
-          ]
+            {
+              name: "Playfair Display",
+              styles: "wght@400;500;700",
+              defer: true,
+            },
+            {
+              name: "Poppins",
+              styles: "wght@300;400;500;600;700",
+              defer: true,
+            },
+          ],
         }
       }),
       VitePWA({

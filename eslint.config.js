@@ -74,7 +74,7 @@ export default [
     },
     rules: {
       'vue/no-multiple-template-root': 'off',
-      'vue/html-indent': ['warn', 2, { attribute: 1, baseIndent: 1 }],
+      'vue/html-indent': 'off', //['warn', 2, { attribute: 1, baseIndent: 1 }],
       'vue/max-attributes-per-line': ['warn', { singleline: 3, multiline: { max: 1 } }],
       'vue/html-self-closing': [
         'warn',
@@ -93,6 +93,6 @@ export default [
   // Ignore dist and config files
   // =========================
   {
-    ignores: ['dist/**', 'config/**', 'vite.config.ts', 'eslint.config.js'],
+    ignores: ['dist/**', 'dev-dist/**', 'config/**', 'vite.config.ts', 'eslint.config.js'],
   },
 ]
