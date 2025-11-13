@@ -1,47 +1,90 @@
-<template>
-  <DefaultLayout>
-    <section class="py-16 text-center">
-      <h1 class="font-heading mb-4 text-4xl font-bold md:text-5xl">
-        Welcome to <span class="text-primary">BrandName</span>
-      </h1>
-      <p class="text-base-content/70 mx-auto max-w-2xl">
-        A clean starting point for your client’s content. This section can later be managed from the
-        CMS or GrapesJS editor.
-      </p>
-      <div class="mt-6">
-        <router-link
-          to="/about"
-          class="btn btn-primary"
-          >Learn more</router-link
-        >
-      </div>
-      <p class="text-base-content/80 p-4 text-justify indent-6 text-base leading-relaxed md:p-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas est nibh, ornare eget
-        sapien ut, consequat vehicula mi. Mauris faucibus auctor rutrum. Nullam accumsan sem nec
-        eros posuere malesuada. In sit amet arcu ligula. Cras vel tortor vel sapien maximus ultrices
-        eu non diam. Curabitur cursus vehicula felis. Nunc vitae ipsum vulputate, dapibus libero sit
-        amet, dapibus nunc. Duis consectetur sed dui at condimentum. Suspendisse ultrices vulputate
-        urna nec vulputate. Aliquam erat volutpat. Fusce sodales purus nec velit commodo aliquet.
-        Quisque eget enim at libero pharetra tincidunt sit amet sed odio. Nulla aliquet purus vitae
-        nisl finibus finibus. Etiam rhoncus leo at dui dignissim posuere. Pellentesque eget dolor ac
-        quam mattis fermentum. Donec at vehicula felis.
-      </p>
-
-      <p class="text-base-content/80 p-4 text-justify indent-6 text-base leading-relaxed md:p-6">
-        Curabitur accumsan felis non mauris luctus, in posuere elit rhoncus. Aliquam erat volutpat.
-        Maecenas tempor posuere elit sed cursus. Integer scelerisque vel ipsum ut commodo. Sed
-        iaculis massa pulvinar nibh consectetur, eu blandit urna commodo. Donec at velit at sem
-        blandit mollis. Nam eget nunc finibus, pulvinar justo a, maximus est. Proin ut consectetur
-        nisi. Donec convallis nulla eu leo fringilla laoreet. Suspendisse dapibus felis nisi, non
-        imperdiet magna blandit in. Curabitur ullamcorper lectus quis metus interdum pellentesque.
-        Aliquam nec pellentesque lectus. Sed euismod nisl consectetur felis pulvinar luctus. Integer
-        at posuere mi. Praesent libero lorem, scelerisque sit amet condimentum vel, eleifend eget
-        lacus. Aenean posuere scelerisque sapien a finibus.
-      </p>
-    </section>
-  </DefaultLayout>
-</template>
-
 <script setup lang="ts">
-import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import { onMounted } from 'vue'
+
+import BaseButton from '@/components/atoms/BaseButton.vue'
+import Card from '@/components/atoms/Card.vue'
+import Section from '@/components/molecules/Section.vue'
+import MarketingTemplate from '@/components/templates/MarketingTemplate.vue'
+import { setMeta } from '@/utils/seo'
+
+onMounted(() => setMeta({ title: 'Home — Astranova', description: 'Provisional landing' }))
 </script>
+
+<template>
+  <MarketingTemplate>
+    <Section
+      title="Awaken your potential under the stars."
+      description="Astranova connects you with transformative experiences guided by modern astrology and ancient intuition."
+    >
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1 space-y-4">
+          <p class="text-[var(--muted)]">
+            Discover curated sessions, workshops, and celestial events designed to help you realign
+            with your inner rhythm.
+          </p>
+          <div class="flex gap-3">
+            <BaseButton>Book your session</BaseButton>
+            <BaseButton variant="ghost">Learn more</BaseButton>
+          </div>
+        </div>
+        <div class="flex-1">
+          <Card>
+            <div class="aspect-video grid place-items-center text-[var(--muted)]">
+              Media placeholder
+            </div>
+          </Card>
+        </div>
+      </div>
+    </Section>
+
+    <Section
+      eyebrow="Why Astranova"
+      title="Guidance for the modern seeker"
+      description="Each experience blends mindful science, astrology, and art to bring balance to your everyday life."
+    >
+      <div class="grid md:grid-cols-3 gap-4">
+        <Card>
+          <h3 class="font-medium mb-1">Personalized Insights</h3>
+          <p class="text-[var(--muted)]">
+            Get clear direction through your unique birth chart and energy patterns.
+          </p>
+        </Card>
+        <Card>
+          <h3 class="font-medium mb-1">Curated Experiences</h3>
+          <p class="text-[var(--muted)]">
+            Attend themed events that align with lunar and planetary cycles.
+          </p>
+        </Card>
+        <Card>
+          <h3 class="font-medium mb-1">Holistic Balance</h3>
+          <p class="text-[var(--muted)]">
+            Combine astrology, movement, and reflection to recharge your creative energy.
+          </p>
+        </Card>
+      </div>
+    </Section>
+
+    <Section eyebrow="Upcoming events" title="Moments aligned with the cosmos">
+      <div class="grid md:grid-cols-3 gap-4">
+        <Card>New Moon Meditation — Online, Dec 3</Card>
+        <Card>Planetary Reset Workshop — Mexico City, Dec 15</Card>
+        <Card>The Energy Map 2026 Preview — Virtual, Jan 4</Card>
+      </div>
+    </Section>
+
+    <Section eyebrow="From the blog" title="Stories written in the sky">
+      <div class="grid md:grid-cols-3 gap-4">
+        <Card>How planetary retrogrades actually help you grow</Card>
+        <Card>Your daily rituals for Mars season</Card>
+        <Card>Why Venus in Libra inspires connection</Card>
+      </div>
+    </Section>
+
+    <Section max="sm" title="Start your journey today.">
+      <div class="flex gap-3">
+        <BaseButton>Book now</BaseButton>
+        <BaseButton variant="ghost">Join the newsletter</BaseButton>
+      </div>
+    </Section>
+  </MarketingTemplate>
+</template>
