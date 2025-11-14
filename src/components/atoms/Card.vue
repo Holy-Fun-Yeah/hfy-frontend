@@ -1,5 +1,5 @@
 <template>
-  <article class="rounded-[var(--radius)] bg-[var(--surface)] border border-[var(--border)] p-4">
+  <article class="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] p-4">
     <slot />
   </article>
 </template>

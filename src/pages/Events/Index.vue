@@ -14,15 +14,22 @@ const events = [
 <template>
   <MarketingTemplate>
     <Section title="Gather under the stars">
-      <p class="text-[var(--muted)] mb-6">
+      <p class="mb-6 text-[var(--muted)]">
         Join guided events and experiences designed to synchronize your inner cycles with cosmic
         motion.
       </p>
       <template v-if="events.length === 0">
         <EmptyState />
       </template>
-      <div v-else class="grid md:grid-cols-3 gap-4">
-        <Card v-for="e in events" :key="e.id">{{ e.title }}</Card>
+      <div
+        v-else
+        class="grid gap-4 md:grid-cols-3"
+      >
+        <Card
+          v-for="e in events"
+          :key="e.id"
+          >{{ e.title }}</Card
+        >
       </div>
     </Section>
   </MarketingTemplate>

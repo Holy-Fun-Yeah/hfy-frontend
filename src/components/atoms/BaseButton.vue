@@ -15,7 +15,7 @@ const Comp = props.as ?? 'button'
   <component
     :is="Comp"
     :href="href"
-    class="inline-flex items-center justify-center px-4 py-2 rounded-[var(--radius)] border border-[var(--border)] transition hover:opacity-90 focus:outline-none focus-visible:ring data-[v=primary]:bg-[var(--primary)] data-[v=primary]:text-black data-[v=ghost]:bg-transparent data-[v=ghost]:text-[var(--fg)]"
+    class="inline-flex items-center justify-center rounded-[var(--radius)] border border-[var(--border)] px-4 py-2 transition hover:opacity-90 focus:outline-none focus-visible:ring data-[v=ghost]:bg-transparent data-[v=ghost]:text-[var(--fg)] data-[v=primary]:bg-[var(--primary)] data-[v=primary]:text-black"
     :data-v="props.variant ?? 'primary'"
     :disabled="Comp === 'button' ? disabled : undefined"
   >

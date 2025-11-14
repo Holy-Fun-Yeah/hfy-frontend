@@ -5,7 +5,10 @@ import MarketingTemplate from '@/components/templates/MarketingTemplate.vue'
 
 <template>
   <MarketingTemplate>
-    <Section title="The path between science and symbolism" description="By Aurora Vega — November 12, 2025">
+    <Section
+      title="The path between science and symbolism"
+      description="By Aurora Vega — November 12, 2025"
+    >
       <article class="prose prose-invert max-w-none">
         <p>Astrology isn’t about fate — it’s about timing.</p>
         <p>The universe moves in patterns, and so do we.</p>

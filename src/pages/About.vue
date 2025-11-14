@@ -14,7 +14,7 @@ onMounted(() => setMeta({ title: 'About — Astranova', description: 'About us (
       title="A cosmic journey reimagined."
       description="Astranova was born from the belief that astrology can be practical, poetic, and empowering."
     >
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid gap-6 md:grid-cols-2">
         <div class="space-y-3">
           <p class="text-[var(--muted)]">
             We’re a collective of artists, technologists, and astrologers creating digital
@@ -26,7 +26,9 @@ onMounted(() => setMeta({ title: 'About — Astranova', description: 'About us (
             over prediction. Exploration: learning through movement, art, and reflection.
           </p>
         </div>
-        <div class="rounded-[var(--radius)] bg-[var(--surface)] border border-[var(--border)] aspect-video" />
+        <div
+          class="aspect-video rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)]"
+        />
       </div>
     </Section>
   </MarketingTemplate>

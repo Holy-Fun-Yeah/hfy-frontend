@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <section class="py-12 border-b border-[var(--border)]">
+  <section class="border-b border-[var(--border)] py-12">
     <div
       class="mx-auto px-4"
       :class="{
@@ -17,9 +17,24 @@ const props = defineProps<{
         'max-w-5xl': !props.max || props.max === 'lg',
       }"
     >
-      <p v-if="eyebrow" class="text-sm text-[var(--muted)] mb-2">{{ eyebrow }}</p>
-      <h2 v-if="title" class="font-serif text-3xl mb-3">{{ title }}</h2>
-      <p v-if="description" class="text-base text-[var(--muted)] mb-6">{{ description }}</p>
+      <p
+        v-if="eyebrow"
+        class="mb-2 text-sm text-[var(--muted)]"
+      >
+        {{ eyebrow }}
+      </p>
+      <h2
+        v-if="title"
+        class="mb-3 font-serif text-3xl"
+      >
+        {{ title }}
+      </h2>
+      <p
+        v-if="description"
+        class="mb-6 text-base text-[var(--muted)]"
+      >
+        {{ description }}
+      </p>
       <slot />
     </div>
   </section>

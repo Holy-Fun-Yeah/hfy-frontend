@@ -2,8 +2,7 @@ import Unfonts from 'unplugin-fonts/vite'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
-import tailwindcss from "@tailwindcss/vite"
-
+import tailwindcss from '@tailwindcss/vite'
 
 export default ({ mode }) => {
   // Load environment variables based on the current mode (dev, production, etc.)
@@ -28,17 +27,17 @@ export default ({ mode }) => {
         google: {
           families: [
             {
-              name: "Playfair Display",
-              styles: "wght@400;500;700",
+              name: 'Playfair Display',
+              styles: 'wght@400;500;700',
               defer: true,
             },
             {
-              name: "Poppins",
-              styles: "wght@300;400;500;600;700",
+              name: 'Poppins',
+              styles: 'wght@300;400;500;600;700',
               defer: true,
             },
           ],
-        }
+        },
       }),
       VitePWA({
         registerType: 'autoUpdate',
@@ -71,7 +70,7 @@ export default ({ mode }) => {
             },
           ],
         },
-      })
+      }),
     ],
   })
 }

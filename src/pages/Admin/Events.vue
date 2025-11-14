@@ -5,9 +5,9 @@ import AdminTemplate from '@/components/templates/AdminTemplate.vue'
 
 <template>
   <AdminTemplate>
-    <div class="flex items-center justify-between mb-4">
-      <h1 class="text-2xl font-serif">Events</h1>
-      <button class="px-3 py-2 rounded border border-[var(--border)] opacity-60 cursor-not-allowed">
+    <div class="mb-4 flex items-center justify-between">
+      <h1 class="font-serif text-2xl">Events</h1>
+      <button class="cursor-not-allowed rounded border border-[var(--border)] px-3 py-2 opacity-60">
         New (UI)
       </button>
     </div>

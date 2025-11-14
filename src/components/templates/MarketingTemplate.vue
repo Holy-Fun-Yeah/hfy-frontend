@@ -4,7 +4,7 @@ import MainFooter from '@/components/organisms/MainFooter.vue'
 </script>
 
 <template>
-  <div class="min-h-dvh flex flex-col">
+  <div class="flex min-h-dvh flex-col">
     <MainHeader />
     <main class="flex-1">
       <slot />

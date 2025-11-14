@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Source+Sans+3:wght@400;500&display=swap');
 
-:root{
---bg:#f2fbf6; --fg:#132622; --muted:#5f736c;
---primary:#7d62e4; --surface:#ffffff; --border:#d5e5dc;
---radius:.75rem; --space:1rem;
---font-display:"Cormorant Garamond", serif; --font-body:"Source Sans 3", system-ui, sans-serif;
+:root {
+  --bg: #f2fbf6;
+  --fg: #132622;
+  --muted: #5f736c;
+  --primary: #7d62e4;
+  --surface: #ffffff;
+  --border: #d5e5dc;
+  --radius: 0.75rem;
+  --space: 1rem;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
 }
-html,body{background:var(--bg);color:var(--fg);font-family:var(--font-body);}
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+}
